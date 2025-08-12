@@ -3,9 +3,10 @@ const nextConfig = {
   images: {
     domains: [
       'localhost', // for local development
-      'https://backend-cq6j.onrender.com' // replace with your actual backend render domain
+      'backend-cq6j.onrender.com' // ✅ just the domain, no https://
     ],
   },
 };
 
 export default nextConfig;
+

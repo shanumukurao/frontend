@@ -23,8 +23,8 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   try {
     const response = await axios.post(
-      // 'http://localhost:5050/api/auth/register',
-      'https://backend-cq6j.onrender.com/api/auth/register',
+      'http://localhost:5050/api/auth/register',
+      // 'https://backend-cq6j.onrender.com/api/auth/register',
       formData
     );
     console.log("Data posted successfully:", response.data);
