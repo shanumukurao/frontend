@@ -1,9 +1,7 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import AddProducts from '../Products/AddProducts'; // Adjust path if needed
-import fetchProducts from '@/app/api/mainpage/route';
-import { resolve } from 'styled-jsx/css';
 
 const MainPage = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
