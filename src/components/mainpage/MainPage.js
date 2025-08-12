@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import AddProducts from '../Products/AddProducts'; // Adjust path if needed
+import Image from "next/image";
 
 const MainPage = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
@@ -51,10 +52,12 @@ item.price.toString().includes(searchTerm)
             key={item._id}
             className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-300"
           >
-            <img
+            <Image
               src={`http://localhost:5050${item.image}`}
               alt={item.name}
-              className="w-32 h-32 object-cover rounded-md mb-4"
+              height={300}
+              width={100}
+              className="object-cover rounded-md mb-4"
             />
             <h1 className="text-lg font-semibold text-gray-800">{item.name}</h1>
             <p className="text-gray-600">₹{item.price}</p>
