@@ -23,7 +23,8 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   try {
     const response = await axios.post(
-      'http://localhost:5050/api/auth/login',
+      // 'http://localhost:5050/api/auth/login',
+      'https://backend-cq6j.onrender.com/api/auth/login',
       formData
     );
     console.log("Data posted successfully:", response.data);
