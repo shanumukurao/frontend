@@ -39,7 +39,7 @@ const AddProducts = ({ onClose }) => {
 
       const response = await axios.post(
         // "http://localhost:5050/api/products/AddProducts",
-        "https://backend-cq6j.onrender.com/api/products/products",
+        "https://backend-cq6j.onrender.com/api/products/AddProducts",
         form,
         {
           headers: {

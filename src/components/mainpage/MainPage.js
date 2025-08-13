@@ -52,8 +52,9 @@ item.price.toString().includes(searchTerm)
             key={item._id}
             className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-300"
           >
-            <Image
-              src={`http://localhost:5050${item.image}`}
+            <img
+              // src={`http://localhost:5050${item.image}`}
+              src={`https://backend-cq6j.onrender.com${item.image}`}
               alt={item.name}
               height={300}
               width={100}
