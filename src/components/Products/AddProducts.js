@@ -38,8 +38,8 @@ const AddProducts = ({ onClose }) => {
       }
 
       const response = await axios.post(
-        // "http://localhost:5050/api/products/AddProducts",
-        "https://backend-cq6j.onrender.com/api/products/AddProducts",
+        "http://localhost:5050/api/product/AddProducts",
+        // "https://backend-cq6j.onrender.com/api/product/AddProducts",
         form,
         {
           headers: {
@@ -63,6 +63,7 @@ const AddProducts = ({ onClose }) => {
       if (typeof onClose === "function") {
         onClose();
       }
+      
     } catch (error) {
       console.log("posting error");
     }

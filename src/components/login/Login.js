@@ -25,8 +25,14 @@ const handleSubmit = async (e) => {
     const response = await axios.post(
       // 'http://localhost:5050/api/auth/login',
       'https://backend-cq6j.onrender.com/api/auth/login',
-      formData
+      formData,
+      {
+        headers: {
+          'Content-Type': 'application/json', // ✅ lowercase
+        },
+      }
     );
+
     console.log("Data posted successfully:", response.data);
 
     // Clear the form after successful submit
@@ -35,9 +41,15 @@ const handleSubmit = async (e) => {
       username: "",
       password: ""
     });
-    router.push('/login');
+
+    // Redirect after login
+    router.push('/mainpage');
   } catch (err) {
-    console.error("Error posting data:", err);
+    if (err.response) {
+      console.error("Server responded with error:", err.response.data);
+    } else {
+      console.error("Error posting data:", err.message);
+    }
   }
 };
 
